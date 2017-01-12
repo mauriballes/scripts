@@ -9,3 +9,18 @@ persona dia a dia en varias ocasiones, quizas a futuro intente colocar otro
 tipo de scripts pero por el momento estan los mas basicos.
 
 Espero que si alguien decide usarlos, le sean de utilidad al esa persona.
+
+## How to Use
+
+Para usar los script primero debemos asegurarnos que los mismos tengan
+permisos de ejecucion. Para darselos se debe usar el siguiente comando:
+
+`$ sudo chmod +x nombre_del_script.sh`
+
+Una vez que se haya dado el permiso de ejecucion se procede a su ejecucion:
+
+`$ ./nombre_del_script.sh`
+
+En caso de pedir permisos de root ejecutar el script anteponiendo el comando sudo:
+
+`$ sudo ./nombre_del_script.sh`

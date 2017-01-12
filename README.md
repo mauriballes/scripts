@@ -1,31 +1,35 @@
-# Scripts para Ubuntu
+# Scripts for Ubuntu
 
 ```
-NOTA: LOS COMANDOS FUERON PROBADOS EN UBUNTU 16.04.1, PERO DEBERIAN FUNCIONAR
-EN CUALQUIER OTRA VERSION DE UBUNTU, NOTIFICAR CUALQUIER ISSUE
+Note: All these scripts were tested in Ubuntu 16.04.1 LTS, but they should work
+with any software distributions based on Debian. Feel free to notify if you
+find any issue.
 ```
 
-La presente es un conjunto de scripts que tienen por objetivo facilitar
-un conjunto de tareas a la hora de trabajar en sistemas operativos GNU/LINUX
+These are a set of shell scripts that help to make easier some common tasks and
+commands we always used when we are working with GNU/Linux.
 
-Aqui se muestran algunos scripts que tal vez sean muy basicos, pero utiles
-al momento de realizar tareas del dia a dia. Los mismos son utilizados por mi
-persona dia a dia en varias ocasiones, quizas a futuro intente colocar otro 
-tipo de scripts pero por el momento estan los mas basicos.
-
-Espero que si alguien decide usarlos, le sean de utilidad al esa persona.
+I hope that these shell scripts can help you and send me an email for new ideas
+for next scripts.
 
 ## How to Use
 
-Para usar los script primero debemos asegurarnos que los mismos tengan
-permisos de ejecucion. Para darselos se debe usar el siguiente comando:
+First, you have to ensure that scripts have execution permission. To do that you
+can execute the next command:
 
-`$ sudo chmod +x nombre_del_script.sh`
+`$ sudo chmod +x script_name.sh`
 
-Una vez que se haya dado el permiso de ejecucion se procede a su ejecucion:
+Once you have given execution permission, for execute the script you can do this:
 
-`$ ./nombre_del_script.sh`
+`$ ./script_name.sh`
 
-En caso de pedir permisos de root ejecutar el script anteponiendo el comando sudo:
+Some scripts need to be executed as root. If it necessary execute as root, you
+need to put **sudo** before execute the script.
 
-`$ sudo ./nombre_del_script.sh`
+`$ sudo ./script_name.sh`
+
+## TO DO
+
+- Organize scripts in folders
+- Include a brief description about each script
+- Something else

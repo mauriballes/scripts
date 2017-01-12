@@ -1,5 +1,10 @@
 # Scripts para Ubuntu
 
+```
+NOTA: LOS COMANDOS FUERON PROBADOS EN UBUNTU 16.04.1, PERO DEBERIAN FUNCIONAR
+EN CUALQUIER OTRA VERSION DE UBUNTU, NOTIFICAR CUALQUIER ISSUE
+```
+
 La presente es un conjunto de scripts que tienen por objetivo facilitar
 un conjunto de tareas a la hora de trabajar en sistemas operativos GNU/LINUX
 

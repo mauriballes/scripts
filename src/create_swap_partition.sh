@@ -12,11 +12,12 @@ if [ $UID != $ROOT_UID ]
 then
   echo "Must be root to run this script."
   exit $E_NOTROOT
-fi  
+fi
 
-if grep -l "$SWAP" /etc/fstab
+if [ grep -l "$SWAP" /etc/fstab ]
+then
   echo "You already create a swap file with this script!"
-  exit 3 
+  exit 3
 fi
 
 echo "1.- Select size for SWAP [1-4]"

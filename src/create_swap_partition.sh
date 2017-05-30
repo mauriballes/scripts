@@ -14,7 +14,7 @@ then
   exit $E_NOTROOT
 fi
 
-if [ grep -l "$SWAP" /etc/fstab ]
+if [[ grep -l "$SWAP" /etc/fstab ]]
 then
   echo "You already create a swap file with this script!"
   exit 3

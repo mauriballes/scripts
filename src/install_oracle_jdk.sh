@@ -7,6 +7,8 @@ REPO=webupd8team/java # PPA Oracle
 JDK_6=oracle-java6-installer # Oracle JDK 6
 JDK_7=oracle-java7-installer # Oracle JDK 7
 JDK_8=oracle-java8-installer # Oracle JDK 8
+JAVA_HOME='JAVA_HOME="/usr/lib/jvm/java-'
+ENVI=/etc/environment
 # Variables are better than hard-coded values.
 
 # Run as root, of course.
@@ -14,7 +16,7 @@ if [ $UID != $ROOT_UID ]
 then
   echo "Must be root to run this script."
   exit $E_NOTROOT
-fi  
+fi
 
 echo "1.- Installing Packages"
 apt-get install python-software-properties -y
@@ -22,7 +24,7 @@ apt-get install python-software-properties -y
 if ! grep -l "$REPO" /etc/apt/sources.list /etc/apt/sources.list.d/*
 then
   add-apt-repository ppa:$REPO -y
-fi	
+fi
 
 echo "2.- Updating"
 apt-get update
@@ -40,18 +42,32 @@ read VERSION
 if [ $VERSION == 1 ]
 then
   apt-get install $JDK_6 -y
+  JAVA_HOME+='6-oracle"'
 elif [ $VERSION == 2 ]
 then
   apt-get install $JDK_7 -y
+  JAVA_HOME+='7-oracle"'
 elif [ $VERSION == 3 ]
 then
   apt-get install $JDK_8 -y
+  JAVA_HOME+='8-oracle"'
 else
   echo "Cancelled By User"
   exit 1
 fi
 
+echo -n "Do you want to configure JAVA_HOME? [Y/n] "
+read RES
+
+if [[ "$RES" == "y" || "$RES" == "Y" ]]
+then
+    echo $JAVA_HOME >> $ENVI
+    source $ENVI
+    echo "JAVA_HOME Configured!"
+fi
+
 echo "#################"
 echo "JAVA INSTALLED!"
 echo "#################"
+
 exit 0
